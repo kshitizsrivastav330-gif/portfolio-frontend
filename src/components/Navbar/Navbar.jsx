@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 import Logo from "./Logo";
-import navLinks from "./NavLinks";
+import navLinks from "./NavLinks.js";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
