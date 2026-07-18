@@ -1,0 +1,289 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    backdrop-filter: blur(18px);
+    background: rgba(5, 8, 22, 0.75);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: all 0.35s ease;
+}
+
+.navbar-container {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+/* Animated underline */
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+            90deg,
+            #8b5cf6,
+            #2563eb
+    );
+
+    transition: width 0.35s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   DESKTOP SOCIAL ICONS
+========================================== */
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-social a {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: all 0.35s ease;
+}
+
+.nav-social a:hover {
+    transform: translateY(-5px) scale(1.08);
+
+    background: linear-gradient(
+            135deg,
+            #8b5cf6,
+            #2563eb
+    );
+
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.35);
+}
+
+/* ==========================================
+   MOBILE MENU BUTTON
+========================================== */
+
+.menu-btn {
+    display: none;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: #ffffff;
+    font-size: 22px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+}
+
+/* ==========================================
+   MOBILE SOCIAL LINKS
+========================================== */
+
+.mobile-social {
+    display: none;
+}
+
+.mobile-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.mobile-social a:hover {
+    color: #8b5cf6;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .nav-social {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 26px;
+
+        padding: 35px 0;
+
+        background: rgba(5, 8, 22, 0.98);
+
+        backdrop-filter: blur(25px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: all 0.4s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .mobile-social {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 10px;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        height: 75px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-menu {
+        top: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+        padding: 0 18px;
+    }
+
+    .nav-menu {
+        gap: 22px;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+
+    .mobile-social a {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,475 @@
+/* ==========================================
+   SKILLS SECTION
+========================================== */
+
+.skills{
+    position:relative;
+    padding:120px 0;
+    background:
+            radial-gradient(circle at top left,
+            rgba(124,58,237,.10),
+            transparent 35%),
+
+            radial-gradient(circle at bottom right,
+            rgba(37,99,235,.10),
+            transparent 35%),
+
+            #050816;
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.skills-subtitle{
+    max-width:700px;
+    margin:20px auto 0;
+    text-align:center;
+    color:#9CA3AF;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.tech-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.tech-card{
+
+    position:relative;
+
+    padding:40px 25px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    transition:.4s;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.tech-card:hover{
+
+    transform:
+            translateY(-12px)
+            scale(1.05);
+
+    border-color:#7C3AED;
+
+    box-shadow:
+            0 20px 45px rgba(124,58,237,.25);
+
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.tech-icon{
+
+    font-size:64px;
+
+    margin-bottom:22px;
+
+    transition:.45s;
+
+}
+
+.tech-card:hover .tech-icon{
+
+    transform:
+            rotate(-8deg)
+            scale(1.15);
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.tech-card h3{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   GLOW BORDER
+========================================== */
+
+.tech-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+
+            90deg,
+
+            #7C3AED,
+
+            #2563EB,
+
+            #06B6D4,
+
+            #7C3AED
+
+    );
+
+    background-size:300%;
+
+    filter:blur(18px);
+
+    opacity:0;
+
+    transition:.4s;
+
+    animation:borderMove 6s linear infinite;
+
+    z-index:-1;
+
+}
+
+.tech-card:hover::after{
+
+    opacity:.9;
+
+}
+
+@keyframes borderMove{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
+/* ==========================================
+   FLOATING ANIMATION
+========================================== */
+
+.tech-card:nth-child(1){
+    animation:floatCard 5s ease-in-out infinite;
+}
+
+.tech-card:nth-child(2){
+    animation:floatCard 5s ease-in-out infinite .3s;
+}
+
+.tech-card:nth-child(3){
+    animation:floatCard 5s ease-in-out infinite .6s;
+}
+
+.tech-card:nth-child(4){
+    animation:floatCard 5s ease-in-out infinite .9s;
+}
+
+.tech-card:nth-child(5){
+    animation:floatCard 5s ease-in-out infinite 1.2s;
+}
+
+.tech-card:nth-child(6){
+    animation:floatCard 5s ease-in-out infinite 1.5s;
+}
+
+.tech-card:nth-child(7){
+    animation:floatCard 5s ease-in-out infinite 1.8s;
+}
+
+.tech-card:nth-child(8){
+    animation:floatCard 5s ease-in-out infinite 2.1s;
+}
+
+.tech-card:nth-child(9){
+    animation:floatCard 5s ease-in-out infinite 2.4s;
+}
+
+.tech-card:nth-child(10){
+    animation:floatCard 5s ease-in-out infinite 2.7s;
+}
+
+.tech-card:nth-child(11){
+    animation:floatCard 5s ease-in-out infinite 3s;
+}
+
+.tech-card:nth-child(12){
+    animation:floatCard 5s ease-in-out infinite 3.3s;
+}
+
+.tech-card:nth-child(13){
+    animation:floatCard 5s ease-in-out infinite 3.6s;
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   CATEGORY CHIPS
+========================================== */
+
+.skill-category-row{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.skill-category-row span{
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#E5E7EB;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.skill-category-row span:hover{
+
+    background:linear-gradient(
+            90deg,
+            #7C3AED,
+            #2563EB
+    );
+
+    transform:
+            translateY(-6px)
+            scale(1.08);
+
+    border-color:transparent;
+
+    box-shadow:
+            0 15px 35px rgba(124,58,237,.30);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .tech-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .tech-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .skills{
+
+        padding:90px 0;
+
+    }
+
+    .tech-card{
+
+        padding:30px 20px;
+
+    }
+
+    .tech-icon{
+
+        font-size:54px;
+
+    }
+
+    .tech-card h3{
+
+        font-size:17px;
+
+    }
+
+    .skills-subtitle{
+
+        font-size:16px;
+
+        padding:0 20px;
+
+    }
+
+    .skill-category-row{
+
+        gap:14px;
+
+    }
+
+    .skill-category-row span{
+
+        padding:12px 22px;
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .tech-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .tech-card{
+
+        padding:28px 20px;
+
+    }
+
+    .tech-icon{
+
+        font-size:48px;
+
+    }
+
+    .skill-category-row{
+
+        justify-content:center;
+
+    }
+
+}
+/* ==========================================
+   ICON COLORS
+========================================== */
+
+.java{
+    color:#f89820;
+}
+
+.react{
+    color:#61dafb;
+}
+
+.spring{
+    color:#6DB33F;
+}
+
+.javascript{
+    color:#F7DF1E;
+}
+
+.mysql{
+    color:#00758F;
+}
+
+.tailwind{
+    color:#38BDF8;
+}
+
+.html{
+    color:#E34F26;
+}
+
+.css{
+    color:#1572B6;
+}
+
+.git{
+    color:#F05032;
+}
+
+.github{
+    color:#ffffff;
+}
+
+.postman{
+    color:#FF6C37;
+}
+
+.render{
+    color:#A855F7;
+}
+
+.vercel{
+    color:#ffffff;
+}

@@ -1,0 +1,258 @@
+/* ==========================================
+   CODING PROFILES SECTION
+========================================== */
+
+.coding-profiles {
+    padding: 120px 0;
+    background: #050816;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 70px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.35);
+    color: #d8b4fe;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    background: linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+    color: #9ca3af;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    padding: 35px;
+    transition: 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    border-color: #7c3aed;
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.profile-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-header h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.profile-description {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+/* ==========================================
+   SOLVED
+========================================== */
+
+.profile-solved {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #facc15;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.profile-solved svg {
+    font-size: 22px;
+}
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+.profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.skill-chip {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    color: #d8b4fe;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skill-chip:hover {
+    background: #7c3aed;
+    color: white;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.profile-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 24px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+    );
+
+    font-weight: 600;
+
+    transition: 0.35s;
+}
+
+.profile-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.35);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+    .profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coding-profiles {
+        padding: 90px 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .profile-card {
+        padding: 28px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-skills {
+        justify-content: center;
+    }
+
+    .profile-btn {
+        width: 100%;
+    }
+}

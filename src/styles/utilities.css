@@ -1,0 +1,154 @@
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+    padding:0 28px;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+.section{
+    padding:120px 0;
+}
+
+/* ===========================
+   SECTION HEADING
+=========================== */
+
+.section-heading{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.section-heading span{
+    color:#8B5CF6;
+    font-size:14px;
+    letter-spacing:6px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    margin-top:18px;
+    font-size:56px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.section-heading p{
+    width:700px;
+    max-width:100%;
+    margin:20px auto 0;
+    color:#9CA3AF;
+    line-height:1.8;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.primary-btn{
+
+    background:linear-gradient(90deg,#7C3AED,#2563EB);
+
+    color:white;
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(124,58,237,.35);
+
+}
+
+.secondary-btn{
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+    background:white;
+
+    color:#050816;
+
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#7C3AED;
+
+    box-shadow:0 20px 40px rgba(124,58,237,.20);
+
+}
+
+/* ===========================
+   TAG
+=========================== */
+
+.tag{
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:#1F2937;
+
+    color:white;
+
+    font-size:15px;
+
+}

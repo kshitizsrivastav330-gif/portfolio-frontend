@@ -1,0 +1,234 @@
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    position: relative;
+    margin-top: 60px;
+    background: rgba(5, 8, 22, 0.92);
+    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(255,255,255,.08);
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,#7C3AED,#2563EB,#06B6D4);
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    gap: 40px;
+    padding: 50px 0 30px;
+}
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.footer-brand h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-brand span {
+    color: #8B5CF6;
+}
+
+.footer-brand p {
+    color: #B8BFD0;
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* ==========================================
+   SOCIAL
+========================================== */
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .35s;
+}
+
+.footer-social a:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg,#7C3AED,#2563EB);
+    box-shadow: 0 10px 25px rgba(124,58,237,.35);
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+.footer-links h3,
+.footer-contact h3 {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #B8BFD0;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: .3s;
+    width: fit-content;
+}
+
+.footer-links a:hover {
+    color: #8B5CF6;
+    transform: translateX(6px);
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.footer-contact p {
+    color: #B8BFD0;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* ==========================================
+   BOTTOM
+========================================== */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-bottom p {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+.back-to-top {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    background: linear-gradient(135deg,#7C3AED,#2563EB);
+    transition: .35s;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px) rotate(-10deg);
+    box-shadow: 0 12px 30px rgba(124,58,237,.45);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+        padding: 45px 0 25px;
+    }
+
+    .footer-brand p {
+        margin: 0 auto 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-links a {
+        width: auto;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px) {
+
+    .footer {
+        margin-top: 50px;
+    }
+
+    .footer-content {
+        padding: 40px 0 20px;
+        gap: 30px;
+    }
+
+    .footer-brand h2 {
+        font-size: 28px;
+    }
+
+    .footer-brand p,
+    .footer-contact p,
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+    }
+}
