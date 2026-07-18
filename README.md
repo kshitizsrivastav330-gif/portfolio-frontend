@@ -142,7 +142,7 @@ npm run preview
 **Kshitiz Srivastava**
 
 - 📧 Email: kshitizsrivastav330@gmail.com
-- 💼 LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/kshitiz-srivastava-673223315)
+- 💼 LinkedIn: [linkedin.com/in/kshitiz-srivastava-673223315](https://www.linkedin.com/in/kshitiz-srivastava-673223315)
 - 💻 GitHub: [https://github.com/kshitizsrivastav330-gif
 ](https://github.com/kshitizsrivastav330-gif)
 ---
